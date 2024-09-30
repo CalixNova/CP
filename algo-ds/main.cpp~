@@ -1,16 +1,21 @@
 #include <iostream>
-using namespace std
+using namespace std;
 
+class Ractangle{
+private:
+    int length;
+    int breadth;
 
+public:
+    Ractangle(){
+        length =0;
+        breadth=0;
+    
+    }
+    Ractangle (int l, int b)
+}
 int main(){
    
-    int array[5];
-
-    array[0]=12;
-    array[1]=2;
-
-    cout<<sizeof(array);
-
     return 0;
 }
 
