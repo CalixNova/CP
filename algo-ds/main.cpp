@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
+template <class T>
 class Ractangle{
 private:
-    int length;
-    int breadth;
+    T length;
+    T breadth;
 
 public:
     Ractangle(){
@@ -12,27 +13,27 @@ public:
         breadth=0;
     
     }
-    Ractangle (int l, int b){
-        length = l;
-        breadth = b;
+    Ractangle (T l, T b){
+        this->length = l;
+        this->breadth = b;
     }
     
-    int area(){
+    T area(){
         return length*breadth;
     }
-    int perimeter(){
+    T perimeter(){
         return 2*(length+breadth);
     }
-    void setLength(int l){
+    void setLength(T l){
         length=l;
     }
-    void setBreadth(int b){
+    void setBreadth(T b){
         breadth = b;
     }
-    int getLength(){
+    T getLength(){
         return length;
     }
-    int getBreadth(){
+    T getBreadth(){
         return breadth;
     }
     ~Ractangle(){
@@ -42,12 +43,13 @@ public:
 
 int main(){
 
-    Ractangle r(10,5);
-    
+    Ractangle<int> r(10,5);
+    Ractangle<float> k(1.5678, 3.14163);   
 
     cout<< "Area" << r.area()<< endl;
     cout<< " Perimeter "<< r.perimeter() << endl;
-   
+    cout << "area in template "<< k.area() << endl;
+    cout << "perimeter "<< k.perimeter()<< endl;
     return 0;
 }
 
